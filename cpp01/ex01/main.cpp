@@ -1,29 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   megaphone.cpp                                      :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mafranco <mafranco@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/07 16:31:35 by mafranco          #+#    #+#             */
-/*   Updated: 2024/04/08 16:21:40 by mafranco         ###   ########.fr       */
+/*   Created: 2024/04/08 15:31:53 by mafranco          #+#    #+#             */
+/*   Updated: 2024/04/08 16:16:20 by mafranco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <cctype>
-#include <iostream>
-#include <cstring>
 
-int	main(int argc, char **argv)
+#include <iostream>
+#include <string>
+#include "Zombie.hpp"
+
+int	main(void)
 {
-	if (argc == 1)
-		std::cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *";
-	else {
-		for (int i = 1; i < argc; i++) {
-			for (unsigned long j = 0; j < strlen(argv[i]); j++) {
-				std::cout << char(std::toupper(argv[i][j]));
-			}
-		}
+	Zombie	*z;
+
+	z = zombieHorde(10, "pablo");
+	for (int i = 0;i < 10;i++){
+		z[i].announce();
 	}
-	std::cout << std::endl;
+	delete[] z;
 	return (0);
 }
