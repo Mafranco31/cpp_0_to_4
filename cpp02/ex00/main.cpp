@@ -1,32 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   HumanA.hpp                                         :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mafranco <mafranco@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/08 17:13:53 by mafranco          #+#    #+#             */
-/*   Updated: 2024/04/11 19:14:02 by mafranco         ###   ########.fr       */
+/*   Created: 2024/04/11 19:17:13 by mafranco          #+#    #+#             */
+/*   Updated: 2024/04/11 19:21:31 by mafranco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef HARL_HPP
-# define HARL_HPP
+#include <iostream>
+#include "Fixed.hpp"
 
-# include <iostream>
-# include <string>
+int main( void ) {
 
-class	Harl {
-private:
-	void	debug( void );
-	void	info( void );
-	void	warning( void );
-	void	error( void );
+	Fixed a;
+	Fixed b( a );
+	Fixed c;
 
-public:
-	Harl();
-	~Harl();
-	void complain( std::string level );
-};
+	c = b;
 
-#endif
+	std::cout << a.getRawBits() << std::endl;
+	std::cout << b.getRawBits() << std::endl;
+	std::cout << c.getRawBits() << std::endl;
+
+	return 0;
+}

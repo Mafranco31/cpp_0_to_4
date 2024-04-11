@@ -1,32 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   HumanA.hpp                                         :+:      :+:    :+:   */
+/*   Fixed.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mafranco <mafranco@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/08 17:13:53 by mafranco          #+#    #+#             */
-/*   Updated: 2024/04/11 19:14:02 by mafranco         ###   ########.fr       */
+/*   Created: 2024/04/11 19:10:24 by mafranco          #+#    #+#             */
+/*   Updated: 2024/04/11 19:29:42 by mafranco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef HARL_HPP
-# define HARL_HPP
+#ifndef FIXED_HPP
+# define FIXED_HPP
 
-# include <iostream>
-# include <string>
+#include <iostream>
+#include <string>
 
-class	Harl {
-private:
-	void	debug( void );
-	void	info( void );
-	void	warning( void );
-	void	error( void );
+class	Fixed {
+	private:
+		int	num;
+		const static int	cs_num = 8;
 
-public:
-	Harl();
-	~Harl();
-	void complain( std::string level );
-};
+	public:
+		Fixed();
+		Fixed( Fixed& f);
+		~Fixed();
+		int	getRawBits( void ) const;
+		void	setRawBits( int const raw );
+
+}
 
 #endif
