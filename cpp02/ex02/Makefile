@@ -6,13 +6,13 @@
 #    By: mafranco <mafranco@student.42barcel>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/07 16:32:28 by mafranco          #+#    #+#              #
-#    Updated: 2024/04/13 12:36:40 by mafranco         ###   ########.fr        #
+#    Updated: 2024/04/11 20:02:59 by mafranco         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = megaphone
+NAME = game
 
-SRC = megaphone.cpp
+SRC = main.cpp Fixed.cpp
 
 CC = c++
 
