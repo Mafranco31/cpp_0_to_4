@@ -6,7 +6,7 @@
 #    By: mafranco <mafranco@student.42barcel>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/07 16:32:28 by mafranco          #+#    #+#              #
-#    Updated: 2024/04/08 17:57:07 by mafranco         ###   ########.fr        #
+#    Updated: 2024/04/13 13:45:58 by mafranco         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,6 +16,7 @@ SRC = main.cpp Weapon.cpp HumanA.cpp HumanB.cpp
 INC = Weapon.hpp HumanA.hpp HumanB.hpp
 
 CC = c++
+RM = rm -f
 
 FLAGS = -Wall -Wextra -Werror -std=c++98 -MMD
 
@@ -32,10 +33,10 @@ $(NAME): $(OBJ)
 	$(CC) $(FLAGS) $(OBJ) -o $(NAME)
 
 clean:
-	rm *.o *.d
+	$(RM) *.o *.d
 
 fclean: clean
-	rm $(NAME)
+	$(RM) $(NAME)
 
 re: fclean all
 
