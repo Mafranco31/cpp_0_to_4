@@ -24,10 +24,7 @@ std::string	WrongAnimal::getType( void ) const {
 	return this->type;
 }
 
-void	WrongAnimal::makeSound( void ) const {
-	std::cout << "** BURP **" << std::endl;
-	return ;
-}
+void	WrongAnimal::makeSound( void ) const { return ; }
 
 void	WrongAnimal::setType( std::string type ) {
 	this->type = type;

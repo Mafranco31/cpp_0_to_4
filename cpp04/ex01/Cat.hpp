@@ -13,9 +13,13 @@ private:
 public:
 	Cat( void );
 	virtual ~Cat();
-	Cat( const Cat& other);
-	Cat&	operator= ( const Cat& copy );
+	Cat( const Cat& copy);
+	Cat	&operator= ( Cat other );
+
 	virtual void	makeSound( void ) const;
+	void	add_idea( std::string idea );
+	void	print_ideas( void ) const;
+	void	swap(Cat &first, Cat &second);
 };
 
 #endif

@@ -7,14 +7,14 @@ Cat::Cat ( void ) {
 
 Cat::Cat ( const Cat &copy ) {
 	std::cout << "Copy Cat constructor called" << std::endl;
-	this->setType(copy.type);
+	this->setType(copy.getType());
 }
 
 Cat::~Cat( void ) {
 	std::cout << "Destructor Cat called" << std::endl;
 }
 
-Cat&	Cat::operator=( const Cat& other ) {
+Cat	&Cat::operator=( Cat other ) {
 	std::cout << "Copy assignment operator Cat called" << std::endl;
 	this->setType(other.type);
 	return *this;

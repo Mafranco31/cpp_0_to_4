@@ -32,9 +32,9 @@ void	Cat::makeSound( void ) const {
 	std::cout << "Miaaaaoouuuuuuuuu......" << std::endl;
 }
 
-void	Cat::add_idea( std::string idea ) {
+void	Cat::add_idea( std::string idea) { 
 
-	for (int i = 0; i < 100; i++) {
+	for (int i = 0 ;i < 100; i++) {
 		if (this->brain->get_idea(i) == "") {
 			this->brain->set_idea(i, idea);
 			return;
